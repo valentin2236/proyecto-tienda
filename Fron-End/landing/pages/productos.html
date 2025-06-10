@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <!-- Swiper CSS Boost -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- liks de hojas de estilos -->
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/productos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <title>productos</title>
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+        <div class="container-fluid">
+          <!-- Logo + Nombre (a la izquierda) -->
+          <a
+            class="navbar-brand d-flex align-items-center titulo"
+            href="../index.html"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/888/888879.png"
+              alt="Logo"
+              width="30"
+              height="30"
+              class="me-2"
+            />
+            MiTiendaPC
+          </a>
+
+          <!-- Botón hamburguesa para móviles -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Secciones y carrito (a la derecha) -->
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="productos.html">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-outline-light ms-3" type="button">
+                  🛒 Carrito
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="bg-dark text-light">
+      <!-- Encabezado -->
+      <section class="text-center py-4">
+        <h1 class="display-5 fw-bold">Productos Disponibles</h1>
+        <p class="lead">Encuentra los componentes ideales para tu PC</p>
+      </section>
+
+      <section class="container-fluid">
+        <img src="../assets/img/productos disponiblis 1.jpg" class="w-100 rounded-pill" alt="">
+      </section>
+
+      <section class="container py-5">
+        <!-- barra de busqueda -->
+        <div
+          class="row g-3 align-items-center mb-4 bg-dark p-3 rounded search-bar"
+        >
+          <div class="col-md-4">
+            <input
+              type="text"
+              id="searchInput"
+              class="form-control bg-dark text-white border-secondary"
+              placeholder="Buscar producto..."
+            />
+          </div>
+          <div class="col-md-4">
+            <select
+              id="categoryFilter"
+              class="form-select bg-dark text-white border-secondary"
+            >
+              <option value="">Todas las categorías</option>
+              <option value="procesadores">Procesadores</option>
+              <option value="mother">Placas Madre</option>
+              <option value="graficas">Tarjetas Gráficas</option>
+              <option value="ram">Memoria RAM</option>
+              <option value="perifericos">Perifricos</option>
+              <option value="almacenamiento">Almacenamiento</option>
+              <option value="refrigeracion">refrigeracion</option>
+              <option value="monitores">Monitores</option>
+              <option value="fuentes">Fuentes</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <select
+              id="sortSelect"
+              class="form-select bg-dark text-white border-secondary"
+            >
+              <option value="">Ordenar por</option>
+              <option value="precioAsc">Precio: menor a mayor</option>
+              <option value="precioDesc">Precio: mayor a menor</option>
+            </select>
+          </div>
+        </div>
+        <!-- Tarjetas de productos -->
+        <section class="container my-5 border border-secondary">
+          <h2 class="text-white text-center mb-4 pt-4">Productos Disponibles</h2>
+          <hr>
+          <div class="row g-4 p-5" id="producosContainer">
+            <!-- tarjeta 1 -->
+            <div class="col-md-3">
+              <div 
+              class="card producto bg-dark text-white border border-orange"
+              data-nombre="Ryzen 5 5600x"
+              data-categoria="procesadores"
+              data-precio="120000">
+                <img
+                  id="imagen"
+                  src="../assets/img/PRODUCTOS/Ryzen5_5600x.jpg"
+                  class="card-img-top"
+                  alt="Procesador"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Ryzen 5 5600X</h5>
+                  <p class="card-text">
+                    Procesador 6 núcleos y 12 hilos, ideal para gaming.
+                  </p>
+                  <p class="text-warning">$120.000</p>
+                  <a href="productos1.html?id=ryzen-5-5600x" class="btn btn-outline-warning w-100">Ver más</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- tarjeta 2 -->
+            <div class="col-md-3">
+              <div 
+              class="card producto bg-dark text-white border border-orange h-100"
+              data-nombre="RTX 3060"
+              data-categoria="graficas"
+              data-precio="320000"
+              >
+                <img
+                  src="../assets/img/PRODUCTOS/RTX 3060.jpg"
+                  class="card-img-top"
+                  alt="GPU"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">RTX 3060</h5>
+                  <p class="card-text">
+                    Excelente rendimiento en 1080p y 1440p.
+                  </p>
+                  <p class="text-warning">$320.000</p>
+                  <a href="productos1.html?id=rtx-3060" class="btn btn-outline-warning w-100">Ver más</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- tarjeta 3 -->
+            <div class="col-md-3">
+              <div 
+              class="card producto bg-dark text-white border border-orange h-100"
+              data-nombre="16GB DDR4 3200MHz"
+              data-categoria="ram"
+              data-precio="45000">
+                <img
+                  src="../assets/img/PRODUCTOS/16GB DDR4 3200MHz.jpg"
+                  class="card-img-top"
+                  alt="RAM"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">16GB DDR4 3200MHz</h5>
+                  <p class="card-text">Memoria RAM rápida con disipador.</p>
+                  <p class="text-warning">$45.000</p>
+                  <a href="productos1.html?id=16gb-ddr4-3200mhz" class="btn btn-outline-warning w-100">Ver más</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- tarjeta 4 -->
+            <div class="col-md-3">
+              <div 
+              class="card producto bg-dark text-white border border-orange h-100"
+              data-nombre="SSD 1TB NVMe"
+              data-categoria="almacenamiento"
+              data-precio="65000">
+                <img
+                  src="../assets/img/PRODUCTOS/SSD 1TB NVMe.jpg"
+                  class="card-img-top"
+                  alt="SSD"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">SSD 1TB NVMe</h5>
+                  <p class="card-text">
+                    Carga rápida de juegos y sistema operativo.
+                  </p>
+                  <p class="text-warning">$65.000</p>
+                  <a href="productos1.html?id=ssd-1tb-nvme" class="btn btn-outline-warning w-100">Ver más</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- tarjeta 5 -->
+            <div class="col-md-3">
+              <div 
+              class="card producto bg-dark text-white border border-orange h-100"
+              data-nombre="MSI B550M PRO"
+              data-categoria="mother"
+              data-precio="85000">
+                <img
+                  src="../assets/img/PRODUCTOS/MSI B550M PRO.jpg"
+                  class="card-img-top"
+                  alt="Motherboard"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">MSI B550M PRO</h5>
+                  <p class="card-text">
+                    Compatible con Ryzen 3ra y 5ta generación.
+                  </p>
+                  <p class="text-warning">$85.000</p>
+                  <a href="productos1.html?id=msi-b550m-pro" class="btn btn-outline-warning w-100">Ver más</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- tarjeta 6 -->
+            <div class="col-md-3">
+              <div 
+              class="card producto bg-dark text-white border border-orange h-100"
+              data-nombre="Gabinete Gamer RGB"
+              data-categoria="perifericos"
+              data-precio="60000">
+                <img
+                  src="../assets/img/PRODUCTOS/Gabinete Gamer RGB.jpg"
+                  class="card-img-top"
+                  alt="Gabinete"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Gabinete Gamer RGB</h5>
+                  <p class="card-text">
+                    Incluye 3 coolers ARGB y lateral de vidrio.
+                  </p>
+                  <p class="text-warning">$60.000</p>
+                  <a href="productos1.html?id=gabinete-gamer-rgb" class="btn btn-outline-warning w-100">Ver más</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- tarjeta 7 -->
+            <div class="col-md-3">
+              <div 
+              class="card producto bg-dark text-white border border-orange h-100"
+              data-nombre="Fuente 650W 80 Plus"
+              data-categoria="fuentes"
+              data-precio="42000">
+                <img
+                  src="../assets/img/PRODUCTOS/Fuente 650W 80 Plus.jpg"
+                  class="card-img-top"
+                  alt="Fuente"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Fuente 650W 80 Plus</h5>
+                  <p class="card-text">Energía segura y estable para tu PC.</p>
+                  <p class="text-warning">$42.000</p>
+                  <a href="productos1.html?id=fuente-650w-80plus" class="btn btn-outline-warning w-100">Ver más</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- tarjeta 8 -->
+            <div class="col-md-3">
+              <div 
+              class="card producto bg-dark text-white border border-orange h-100"
+              data-nombre="Cooler Master Hyper 212"
+              data-categoria="refrigeracion"
+              data-precio="30000">
+                <img
+                  src="../assets/img/PRODUCTOS/Cooler Master Hyper 212.jpg"
+                  class="card-img-top"
+                  alt="Cooler"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Cooler Master Hyper 212</h5>
+                  <p class="card-text">
+                    Disipador por aire con gran rendimiento.
+                  </p>
+                  <p class="text-warning">$30.000</p>
+                  <a href="productos1.html?id=cooler-master-hyper-212" class="btn btn-outline-warning w-100">Ver más</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- tarjeta 9 -->
+            <div class="col-md-3">
+              <div 
+              class="card producto bg-dark text-white border border-orange h-100"
+              data-nombre="Monitor 24” 144Hz"
+              data-categoria="monitores"
+              data-precio="150000">
+                <img
+                  src="../assets/img/PRODUCTOS/Monitor 24” 144Hz.jpg"
+                  class="card-img-top"
+                  alt="Monitor"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Monitor 24” 144Hz</h5>
+                  <p class="card-text">Ideal para juegos competitivos.</p>
+                  <p class="text-warning">$150.000</p>
+                  <a href="productos1.html?id=monitor-24”-144hz" class="btn btn-outline-warning w-100">Ver más</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- tarjeta 10 -->
+            <div class="col-md-3">
+              <div 
+              class="card producto bg-dark text-white border border-orange h-100"
+              data-nombre="Teclado Mecánico RGB"
+              data-categoria="perifericos"
+              data-precio="35000">
+                <img
+                  src="../assets/img/PRODUCTOS/Teclado Mecánico RGB.jpg"
+                  class="card-img-top"
+                  alt="Teclado"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Teclado Mecánico RGB</h5>
+                  <p class="card-text">Switches rojos, diseño compacto.</p>
+                  <p class="text-warning">$35.000</p>
+                  <a href="productos1.html?id=teclado-mecanico-rgb" class="btn btn-outline-warning w-100">Ver más</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- tarjeta 11 -->
+            <div class="col-md-3">
+              <div 
+              class="card producto bg-dark text-white border border-orange h-100"
+              data-nombre="Mouse Gamer 7200 DPI"
+              data-categoria="perifericos"
+              data-precio="18000">
+                <img
+                  src="../assets/img/PRODUCTOS/Mouse Gamer 7200 DPI.jpg"
+                  class="card-img-top"
+                  alt="Mouse"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Mouse Gamer 7200 DPI</h5>
+                  <p class="card-text">Ligero, preciso, y con RGB.</p>
+                  <p class="text-warning">$18.000</p>
+                  <div class="align-items-bottom">
+                    <a href="productos1.html?id=mouse-gamer-7200-dpi" class="btn btn-outline-warning w-100">Ver más</a>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+
+            <!-- tarjeta 12 -->
+            <div class="col-md-3">
+              <div 
+              class="card producto bg-dark text-white border border-orange h-100"
+              data-nombre="Headset con micrófono"
+              data-categoria="perifericos"
+              data-precio="25000">
+                <img
+                  src="../assets/img/PRODUCTOS/Headset con micrófono.jpg"
+                  class="card-img-top"
+                  alt="Auriculares"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Headset con micrófono</h5>
+                  <p class="card-text">
+                    Sonido envolvente y cancelación de ruido.
+                  </p>
+                  <p class="text-warning">$25.000</p>
+                  <a href="productos1.html?id=headset-con-microfono" class="btn btn-outline-warning w-100">Ver más</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Copia y pegá el bloque de col-md-3 hasta tener 12 productos -->
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer class="footer pt-4 text-white border-top border-4 border-warning">
+      <div class="container py-5">
+        <div class="row">
+          <!-- Logo / Nombre -->
+          <div class="col-md-4 mb-3">
+            <h4 class="fw-bold text-warning">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/888/888879.png"
+                alt="Logo"
+                width="30"
+                height="30"
+                class="me-2"
+              />
+              MiTiendaPC
+            </h4>
+            <p>Componentes de calidad para armar tu PC ideal.</p>
+          </div>
+
+          <!-- Enlaces útiles -->
+          <div class="col-md-4 mb-3">
+            <h5 class="text-uppercase mb-3">Secciones</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="footer-link">Inicio</a></li>
+              <li><a href="#" class="footer-link">Productos</a></li>
+              <li><a href="#" class="footer-link">Guía de armado</a></li>
+              <li><a href="#" class="footer-link">Contacto</a></li>
+            </ul>
+          </div>
+
+          <!-- Contacto / Redes -->
+          <div class="col-md-4 mb-3">
+            <h5 class="text-uppercase mb-3">Contacto</h5>
+            <p>Email: contacto@mitiendapc.com</p>
+            <p>Tel: +54 11 1234 5678</p>
+            <div class="d-flex gap-3">
+              <a href="#" class="footer-social"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="footer-social"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="footer-social"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr class="border-top border-light" />
+        <p class="text-center m-0">
+          &copy; 2025 MiTiendaPC - Todos los derechos reservados
+        </p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Swiper JS Boost -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- archivo JS -->
+     <script src="../js/productos.js/productosdisp.js"></script>
+     <script src="../js/productos.js/filtros.js"></script>
+     <script src="../js/productos.js/productos1.js"></script>
+</html>
